@@ -38,7 +38,6 @@ const initApp = () => {
     // Subscribe to state changes to update preview
     subscribe((state) => {
         renderPreview();
-        updateFormElements();
     });
 
     // Initial preview render

@@ -86,6 +86,7 @@ const initSkillsHandlers = () => {
                 const skill = skillsInput.value.trim();
                 if (skill) {
                     addSkill(skill);
+                    renderSkills();
                     skillsInput.value = '';
                     autosave();
                 }
@@ -103,6 +104,7 @@ const initRepeatableHandlers = () => {
     if (addExpBtn) {
         addExpBtn.addEventListener('click', () => {
             addExperience({});
+            renderExperience();
             autosave();
         });
     }
@@ -112,6 +114,7 @@ const initRepeatableHandlers = () => {
     if (addEduBtn) {
         addEduBtn.addEventListener('click', () => {
             addEducation({});
+            renderEducation();
             autosave();
         });
     }
@@ -121,6 +124,7 @@ const initRepeatableHandlers = () => {
     if (addProjBtn) {
         addProjBtn.addEventListener('click', () => {
             addProject({});
+            renderProjects();
             autosave();
         });
     }
@@ -130,6 +134,7 @@ const initRepeatableHandlers = () => {
     if (addCertBtn) {
         addCertBtn.addEventListener('click', () => {
             addCertification({});
+            renderCertifications();
             autosave();
         });
     }
@@ -156,6 +161,7 @@ export const renderSkills = () => {
         const removeBtn = tag.querySelector('.skill-tag-remove');
         removeBtn.addEventListener('click', () => {
             removeSkill(skill);
+            renderSkills();
             autosave();
         });
 
@@ -254,6 +260,7 @@ const createExperienceItem = (exp, index) => {
     const removeBtn = div.querySelector('.btn-remove');
     removeBtn.addEventListener('click', () => {
         removeExperience(exp.id);
+        renderExperience();
         autosave();
     });
 
@@ -339,6 +346,7 @@ const createEducationItem = (edu, index) => {
     const removeBtn = div.querySelector('.btn-remove');
     removeBtn.addEventListener('click', () => {
         removeEducation(edu.id);
+        renderEducation();
         autosave();
     });
 
@@ -410,6 +418,7 @@ const createProjectItem = (proj, index) => {
     const removeBtn = div.querySelector('.btn-remove');
     removeBtn.addEventListener('click', () => {
         removeProject(proj.id);
+        renderProjects();
         autosave();
     });
 
@@ -481,6 +490,7 @@ const createCertificationItem = (cert, index) => {
     const removeBtn = div.querySelector('.btn-remove');
     removeBtn.addEventListener('click', () => {
         removeCertification(cert.id);
+        renderCertifications();
         autosave();
     });
 

@@ -121,7 +121,7 @@
     height: 100vh;
     position: sticky;
     top: 0;
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg) var(--spacing-md);
     box-shadow: 2px 0 20px rgba(0, 0, 0, 0.05);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     visibility: visible;
