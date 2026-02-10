@@ -15,12 +15,12 @@ import { getProfession } from './professions.js';
  * Initialize application
  */
 const initApp = () => {
-    console.log('🚀 Initializing DevResume...');
+    console.log('Initializing DevResume...');
 
     // Load saved data from localStorage
     const hasData = loadFromLocalStorage();
     if (hasData) {
-        console.log('✅ Loaded saved resume data');
+        console.log('Loaded saved resume data');
     }
 
     // Initialize all modules
@@ -43,7 +43,7 @@ const initApp = () => {
     // Initial preview render
     renderPreview();
 
-    console.log('✅ DevResume initialized successfully');
+    console.log('DevResume initialized successfully');
 };
 
 /**
