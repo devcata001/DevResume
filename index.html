@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevResume - Professional Resume Builder</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/editor.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/template-minimal.css">
+    <link rel="stylesheet" href="css/template-modern.css">
+    <link rel="stylesheet" href="css/template-classic.css">
+    <link rel="stylesheet" href="css/print.css">
+</head>
+
+<body>
+    <!-- Mobile Navbar -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-content">
+            <h1 class="mobile-nav-title">DevResume</h1>
+            <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Editor" aria-expanded="false"
+                aria-controls="editor-panel">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
+                    <path d="M12 5v14M5 12h14" />
+                </svg>
+                Build Yours
+            </button>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <!-- Editor Panel -->
+        <aside class="editor-panel" id="editor-panel">
+            <div class="editor-header">
+                <h1>DevResume</h1>
+                <p class="tagline">Build your professional resume</p>
+            </div>
+
+            <!-- Profession Selector -->
+            <div class="control-group">
+                <label for="profession-select">Select Profession</label>
+                <select id="profession-select" class="form-control">
+                    <option value="">Custom</option>
+                    <option value="frontend">Frontend Developer</option>
+                    <option value="backend">Backend Developer</option>
+                    <option value="fullstack">Full Stack Developer</option>
+                    <option value="appsec">Application Security Engineer</option>
+                    <option value="devops">DevOps Engineer</option>
+                    <option value="dataengineer">Data Engineer</option>
+                </select>
+            </div>
+
+            <!-- Download Button - Prominent -->
+            <div class="download-section">
+                <button id="download-resume-btn" class="btn btn-download">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Resume PDF
+                </button>
+                <p class="download-hint">Select "Save as PDF" in the print dialog</p>
+            </div>
+
+            <!-- Template Selector -->
+            <div class="control-group">
+                <label for="template-select">Resume Template</label>
+                <select id="template-select" class="form-control">
+                    <option value="minimal">Minimal</option>
+                    <option value="modern">Modern</option>
+                    <option value="classic">Classic</option>
+                </select>
+            </div>
+
+            <!-- Page Size Selector -->
+            <div class="control-group">
+                <label for="page-size-select">Page Size</label>
+                <select id="page-size-select" class="form-control">
+                    <option value="a4">A4</option>
+                    <option value="letter">Letter</option>
+                </select>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="export-pdf-btn" class="btn btn-primary">
+                    <span>📄</span> Export PDF
+                </button>
+                <button id="export-json-btn" class="btn btn-secondary">
+                    <span>💾</span> Export JSON
+                </button>
+                <button id="import-json-btn" class="btn btn-secondary">
+                    <span>📂</span> Import JSON
+                </button>
+                <input type="file" id="import-file-input" accept=".json" style="display: none;">
+                <button id="clear-btn" class="btn btn-danger">
+                    <span>🗑️</span> Clear All
+                </button>
+            </div>
+
+            <!-- Resume Form -->
+            <form id="resume-form" class="resume-form">
+                <!-- Personal Information -->
+                <section class="form-section">
+                    <h2 class="section-title">Personal Information</h2>
+                    <div class="form-group">
+                        <label for="full-name">Full Name *</label>
+                        <input type="text" id="full-name" name="fullName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="job-title">Job Title *</label>
+                        <input type="text" id="job-title" name="jobTitle" class="form-control" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" class="form-control" placeholder="City, State">
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Website/Portfolio</label>
+                        <input type="url" id="website" name="website" class="form-control" placeholder="https://">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn</label>
+                        <input type="url" id="linkedin" name="linkedin" class="form-control"
+                            placeholder="https://linkedin.com/in/username">
+                    </div>
+                    <div class="form-group">
+                        <label for="github">GitHub</label>
+                        <input type="url" id="github" name="github" class="form-control"
+                            placeholder="https://github.com/username">
+                    </div>
+                </section>
+
+                <!-- Summary -->
+                <section class="form-section">
+                    <h2 class="section-title">Professional Summary</h2>
+                    <div class="form-group">
+                        <label for="summary">Summary</label>
+                        <textarea id="summary" name="summary" class="form-control" rows="4"
+                            placeholder="Brief professional summary highlighting your key strengths and experience"></textarea>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="form-section">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="form-group">
+                        <label for="skills-input">Add Skills</label>
+                        <div class="skills-input-wrapper">
+                            <input type="text" id="skills-input" class="form-control"
+                                placeholder="Type a skill and press Enter">
+                        </div>
+                        <div id="skills-container" class="skills-container"></div>
+                    </div>
+                </section>
+
+                <!-- Experience -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Work Experience</h2>
+                        <button type="button" id="add-experience-btn" class="btn btn-small">+ Add</button>
+                    </div>
+                    <div id="experience-container" class="repeatable-container"></div>
+                </section>
+
+                <!-- Education -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Education</h2>
+                        <button type="button" id="add-education-btn" class="btn btn-small">+ Add</button>
+                    </div>
+                    <div id="education-container" class="repeatable-container"></div>
+                </section>
+
+                <!-- Projects -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Projects</h2>
+                        <button type="button" id="add-project-btn" class="btn btn-small">+ Add</button>
+                    </div>
+                    <div id="projects-container" class="repeatable-container"></div>
+                </section>
+
+                <!-- Certifications -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Certifications</h2>
+                        <button type="button" id="add-certification-btn" class="btn btn-small">+ Add</button>
+                    </div>
+                    <div id="certifications-container" class="repeatable-container"></div>
+                </section>
+            </form>
+        </aside>
+
+        <!-- Preview Panel -->
+        <main class="preview-panel">
+            <div id="resume-preview" class="resume-preview">
+                <!-- Resume content will be dynamically generated here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

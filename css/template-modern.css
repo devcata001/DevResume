@@ -1,0 +1,210 @@
+/* ==========================================================================
+   Template: Modern - Contemporary design with accent colors
+   ========================================================================== */
+
+.resume-preview.template-modern .resume-header {
+    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+    color: white;
+    padding: var(--spacing-2xl);
+    margin: calc(-1 * 20mm) calc(-1 * 20mm) var(--spacing-2xl) calc(-1 * 20mm);
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-preview.template-modern .resume-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: modernFloat 6s ease-in-out infinite;
+}
+
+@keyframes modernFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-20px) translateX(-20px);
+    }
+}
+
+/* Adjust for letter size */
+.resume-preview.template-modern.page-letter .resume-header {
+    margin: calc(-1 * 0.75in) calc(-1 * 0.75in) var(--spacing-2xl) calc(-1 * 0.75in);
+}
+
+.resume-preview.template-modern .resume-name {
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.resume-preview.template-modern .resume-title {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.95);
+    text-transform: none;
+}
+
+.resume-preview.template-modern .resume-contact {
+    gap: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.resume-preview.template-modern .resume-contact-item {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
+}
+
+.resume-preview.template-modern .resume-contact-item a {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+
+.resume-preview.template-modern .resume-section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 3px solid #0ea5e9;
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    color: #0ea5e9;
+}
+
+.resume-preview.template-modern .resume-summary {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #2d3748;
+}
+
+.resume-preview.template-modern .resume-skill {
+    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+    color: white;
+    padding: 0.4rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.resume-preview.template-modern .resume-item-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.resume-preview.template-modern .resume-item-subtitle {
+    font-size: 0.95rem;
+    color: #0ea5e9;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.resume-preview.template-modern .resume-item-meta {
+    font-size: 0.875rem;
+    color: #718096;
+    background-color: #edf2f7;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+}
+
+.resume-preview.template-modern .resume-item-description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #4a5568;
+}
+
+.resume-preview.template-modern .resume-item-description ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.resume-preview.template-modern .resume-item-description li {
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.resume-preview.template-modern .resume-item-description li::before {
+    content: "▹";
+    color: #0ea5e9;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.resume-preview.template-modern .resume-certification-name {
+    color: #0ea5e9;
+    font-weight: 700;
+}
+
+/* Responsive Modern Template */
+@media (max-width: 900px) {
+    .resume-preview.template-modern .resume-header {
+        padding: var(--spacing-xl);
+        margin: calc(-1 * var(--spacing-xl)) calc(-1 * var(--spacing-xl)) var(--spacing-xl) calc(-1 * var(--spacing-xl));
+    }
+
+    .resume-preview.template-modern.page-letter .resume-header {
+        margin: calc(-1 * var(--spacing-xl)) calc(-1 * var(--spacing-xl)) var(--spacing-xl) calc(-1 * var(--spacing-xl));
+    }
+}
+
+@media (max-width: 768px) {
+    .resume-preview.template-modern .resume-header {
+        padding: var(--spacing-lg);
+        margin: calc(-1 * var(--spacing-lg)) calc(-1 * var(--spacing-lg)) var(--spacing-lg) calc(-1 * var(--spacing-lg));
+    }
+
+    .resume-preview.template-modern .resume-name {
+        font-size: 2rem;
+    }
+
+    .resume-preview.template-modern .resume-title {
+        font-size: 1.063rem;
+    }
+
+    .resume-preview.template-modern .resume-section-title {
+        font-size: 1rem;
+    }
+
+    .resume-preview.template-modern .resume-item-meta {
+        padding: 0.188rem 0.5rem;
+        font-size: 0.813rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-preview.template-modern .resume-header {
+        padding: var(--spacing-md);
+        margin: calc(-1 * var(--spacing-md)) calc(-1 * var(--spacing-md)) var(--spacing-md) calc(-1 * var(--spacing-md));
+    }
+
+    .resume-preview.template-modern .resume-name {
+        font-size: 1.75rem;
+    }
+
+    .resume-preview.template-modern .resume-title {
+        font-size: 1rem;
+    }
+
+    .resume-preview.template-modern .resume-contact {
+        gap: var(--spacing-sm);
+    }
+
+    .resume-preview.template-modern .resume-skill {
+        padding: 0.313rem 0.75rem;
+        font-size: 0.813rem;
+    }
+}

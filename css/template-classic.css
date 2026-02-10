@@ -1,0 +1,170 @@
+/* ==========================================================================
+   Template: Classic - Traditional professional design
+   ========================================================================== */
+
+.resume-preview.template-classic {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+.resume-preview.template-classic .resume-header {
+    text-align: center;
+    border-bottom: 3px double #2c3e50;
+    padding-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.resume-preview.template-classic .resume-name {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.resume-preview.template-classic .resume-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #34495e;
+    font-style: italic;
+    text-transform: none;
+}
+
+.resume-preview.template-classic .resume-contact {
+    justify-content: center;
+    gap: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.resume-preview.template-classic .resume-contact-item {
+    color: #555555;
+    font-size: 0.875rem;
+}
+
+.resume-preview.template-classic .resume-contact-item::after {
+    content: "|";
+    margin-left: var(--spacing-md);
+    color: #cccccc;
+}
+
+.resume-preview.template-classic .resume-contact-item:last-child::after {
+    content: "";
+}
+
+.resume-preview.template-classic .resume-section-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-lg);
+    color: #2c3e50;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.resume-preview.template-classic .resume-summary {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #333333;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.resume-preview.template-classic .resume-skills {
+    gap: var(--spacing-xs);
+}
+
+.resume-preview.template-classic .resume-skill {
+    background-color: transparent;
+    border: 1px solid #2c3e50;
+    color: #2c3e50;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    border-radius: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.resume-preview.template-classic .resume-item-header {
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.resume-preview.template-classic .resume-item-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2c3e50;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.resume-preview.template-classic .resume-item-subtitle {
+    font-size: 0.95rem;
+    color: #555555;
+    font-style: italic;
+}
+
+.resume-preview.template-classic .resume-item-meta {
+    font-size: 0.875rem;
+    color: #7f8c8d;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.resume-preview.template-classic .resume-item-description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #444444;
+}
+
+.resume-preview.template-classic .resume-item-description ul {
+    list-style-type: square;
+    padding-left: var(--spacing-xl);
+}
+
+.resume-preview.template-classic .resume-item-description li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.resume-preview.template-classic .resume-certification-name {
+    color: #2c3e50;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Responsive Classic Template */
+@media (max-width: 768px) {
+    .resume-preview.template-classic .resume-name {
+        font-size: 1.875rem;
+    }
+
+    .resume-preview.template-classic .resume-title {
+        font-size: 1rem;
+    }
+
+    .resume-preview.template-classic .resume-contact {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .resume-preview.template-classic .resume-section-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-preview.template-classic .resume-name {
+        font-size: 1.625rem;
+        letter-spacing: 0.05em;
+    }
+
+    .resume-preview.template-classic .resume-contact-item::after {
+        content: "";
+    }
+
+    .resume-preview.template-classic .resume-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-xs);
+    }
+}
