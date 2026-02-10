@@ -7,7 +7,7 @@ import { subscribe, getState, setState, resetState, updateMeta } from './state.j
 import { initForm, populateForm, renderSkills, renderExperience, renderEducation, renderProjects, renderCertifications } from './form.js';
 import { renderPreview } from './preview.js';
 import { initTemplates, applyTemplate } from './templates.js';
-import { loadFromLocalStorage, clearLocalStorage, exportToJSON, importFromJSON, saveToLocalStorage } from './storage.js';
+import { loadFromLocalStorage, clearLocalStorage, saveToLocalStorage } from './storage.js';
 import { initPrint, setupPrintListeners, printResume } from './print.js';
 import { getProfession } from './professions.js';
 
@@ -169,41 +169,6 @@ const initActionButtons = () => {
     const exportPdfBtn = document.getElementById('export-pdf-btn');
     if (exportPdfBtn) {
         // Already handled in print.js
-    }
-
-    // Export JSON
-    const exportJsonBtn = document.getElementById('export-json-btn');
-    if (exportJsonBtn) {
-        exportJsonBtn.addEventListener('click', () => {
-            exportToJSON();
-            showNotification('Resume exported as JSON');
-        });
-    }
-
-    // Import JSON
-    const importJsonBtn = document.getElementById('import-json-btn');
-    const importFileInput = document.getElementById('import-file-input');
-
-    if (importJsonBtn && importFileInput) {
-        importJsonBtn.addEventListener('click', () => {
-            importFileInput.click();
-        });
-
-        importFileInput.addEventListener('change', async (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                try {
-                    await importFromJSON(file);
-                    populateForm();
-                    renderPreview();
-                    showNotification('Resume imported successfully');
-                } catch (error) {
-                    alert('Failed to import resume: ' + error.message);
-                }
-                // Clear file input
-                importFileInput.value = '';
-            }
-        });
     }
 
     // Clear all
@@ -378,12 +343,6 @@ const initKeyboardShortcuts = () => {
             e.preventDefault();
             saveToLocalStorage();
             showNotification('Resume saved');
-        }
-
-        // Ctrl/Cmd + E for export JSON
-        if ((e.ctrlKey || e.metaKey) && e.key === 'e') {
-            e.preventDefault();
-            document.getElementById('export-json-btn')?.click();
         }
     });
 };
